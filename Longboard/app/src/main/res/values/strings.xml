@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Longboard</string>
+
+    <string name="start_button">Connect</string>
+
+
+    <string name="output">Not Connected</string>
+
+    <string name="off_text">off</string>
+    <string name="flash_text">flash</string>
+    <string name="chase_text">chase</string>
+    <string name="fade_text">fade</string>
+    <string name="solid_text">solid</string>
+
+    <string name="motor_back_button">Back</string>
+    <string name="speed_control_go_msg">Drag To Move...</string>
+    <string name="speed_control_connect_msg">Connecting...</string>
+    <string name="speed_control_fail_msg">Connection Failed</string>
+    <string name="motor_main_button_connected">Back</string>
+    <string name="motor_main_button_failed">Retry</string>
+    <string name="motor_main_button_connecting">Connecting...</string>
+    <string name="light_options_back">Back</string>
+    <string name="color_prompt">Color</string>
+    <string name="light_peed_prompt">Speed</string>
+    <string name="color_change_button">Change Color</string>
+
+</resources>

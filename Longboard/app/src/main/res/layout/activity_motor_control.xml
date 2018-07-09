@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MotorControlActivity"
+    android:orientation="vertical"
+    android:gravity="bottom"
+
+    >
+
+    <fun.antioch.com.longboard.SpeedControlView
+        android:id="@+id/speed_controller"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:exampleColor="#000000"
+        app:exampleDimension="40sp"
+        android:layout_weight="4"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/motor_back_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:text="@string/motor_back_button"
+            android:enabled="false"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="40sp"
+            android:visibility="gone"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/dc_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:enabled="false"
+            android:text="@string/motor_main_button_connecting"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="40sp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</LinearLayout>

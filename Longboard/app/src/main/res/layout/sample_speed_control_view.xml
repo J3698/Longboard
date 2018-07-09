@@ -1,0 +1,16 @@
+<!--
+xmlns:app="http://schemas.android.com/apk/res/fun.antioch.com.longboard" -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fun.antioch.com.longboard.SpeedControlView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:exampleColor="#000000"
+        app:exampleDimension="24sp"
+    />
+
+</FrameLayout>
