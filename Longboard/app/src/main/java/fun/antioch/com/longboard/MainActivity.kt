@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mConnectButton = findViewById<Button>(R.id.start_button);
+        mConnectButton = findViewById(R.id.start_button);
 
         mConnectButton.setOnClickListener {
             val i = Intent(this@MainActivity, MotorControlActivity::class.java)
@@ -61,6 +61,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 }
