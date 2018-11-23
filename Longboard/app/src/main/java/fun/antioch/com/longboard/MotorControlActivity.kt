@@ -11,6 +11,8 @@ import android.widget.Button
 
 const val MODEM_ADDRESS = "00:06:66:D8:19:3C"
 
+const val CONNECT_ATTEMPTS: Int = 3
+
 class MotorControlActivity : AppCompatActivity() {
     lateinit var mConnectButton: Button
     lateinit var mBackButton: Button
@@ -47,7 +49,7 @@ class MotorControlActivity : AppCompatActivity() {
         val handler = Handler()
         Thread {
             Log.d("info", "About to connect")
-            ArduinoBluetooth.connect(MotorControlActivity@this)
+            ArduinoBluetooth.connect(MotorControlActivity@this, CONNECT_ATTEMPTS)
             Log.d("info", "Connected")
             handler.post {
                 if (ArduinoBluetooth.isConnected) {

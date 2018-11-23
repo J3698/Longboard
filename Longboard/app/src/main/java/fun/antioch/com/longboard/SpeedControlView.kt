@@ -5,6 +5,8 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.os.Vibrator
+import android.support.v4.content.ContextCompat.getSystemService
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -39,7 +41,7 @@ class SpeedControlView : View {
     private var triggerY1: Float = 0f
 
     var maxHeight: Float = 0.75f
-    var resolution: Int = 180
+    var resolution: Int = 175
     var onThrottleListener: (throttle: Int) -> Unit = {}
 
     private var lastThrottle: Int = 0
