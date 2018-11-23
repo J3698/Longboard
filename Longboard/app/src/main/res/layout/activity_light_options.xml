@@ -51,7 +51,9 @@
             android:layout_marginHorizontal="30dp"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:progress="50"
+            android:min="1"
+            android:max="5"
+            android:progress="3"
             />
     </LinearLayout>
     <Button
