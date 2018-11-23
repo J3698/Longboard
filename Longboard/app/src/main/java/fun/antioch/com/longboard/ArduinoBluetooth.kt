@@ -101,10 +101,8 @@ object ArduinoBluetooth {
         }
         val toSend = "$data"
         Log.d("tosend", toSend)
-        for (i in toSend.toCharArray()) {
-            mOutputStream?.write(i.toInt())
-            mOutputStream?.flush()
-        }
+        mOutputStream?.write(toSend.toByteArray())
+        mOutputStream?.flush()
     }
 
     private fun endDataSend() {
@@ -121,19 +119,25 @@ object ArduinoBluetooth {
         mSocket?.close()
     }
 
-    fun connect(activity: AppCompatActivity): Boolean {
+    fun connect(activity: AppCompatActivity, repeat: Int): Boolean {
         if (isConnected) return true
+        if (repeat == -1) return false
+
+        // attempt connection
         val device = getDevice(activity)
         isConnected = device != null && connectToDevice(device)
+
         if (isConnected) {
             // handshake
             mOutputStream?.write(1)
             mOutputStream?.flush()
-
+            // maintain connection
             listenForData()
+            return true
         }
 
-        return isConnected
+        // possible try again
+        return connect(activity, repeat - 1)
     }
 
     private fun getDevice(activity: AppCompatActivity) : BluetoothDevice? {
